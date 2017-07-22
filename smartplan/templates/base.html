@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="/media/css/style.css" />
+   <title>{% block title %}Smartplan{% endblock %}</title>
+</head>
+<body>
+<header>Welcome on Smartplan : AI platform for Supply Chain</header>
+    <nav>
+       {% block nav %}
+       <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/logout/">Logout</a></li>
+       </ul>
+       {% endblock %}
+   </nav>
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+<footer>&copy; Smartplan SAS</footer>
+</body>
+</html>

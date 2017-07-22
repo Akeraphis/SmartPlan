@@ -1,9 +1,10 @@
 from django.conf.urls import url
 from . import views
 
+
 urlpatterns = [
-    url(r'^$', views.home, name="home"),
-    url(r'^login$', views.logIn, name='login'),
+    url(r'^$', views.home),
     url(r'^dataLayer$', views.dataLayer),
-    url(r'^logout$', views.logOut, name="logout")
+    url(r'^test$', views.dire_bonjour),
 ]
+	
