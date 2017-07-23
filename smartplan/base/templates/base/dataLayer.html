@@ -2,6 +2,8 @@
 
 {% for dt in data_tables_of_data_layer %}
     <div class="dt">
-       <h3>{{ dt.name }}</h3><p><a href="dataTable/{{dt.id}}">Explore</a>
+       <h3>{{ dt.name }}</h3><p><a href="{{dt.dataLayer.id}}/dataTable/{{dt.id}}">Explore</a>
     </div>
 {% endfor %}
+
+<a href="{{user.profile.company.id}}/new">Import new</a>

@@ -1,6 +1,8 @@
 from django import forms
+from .models import DataTable
 
 #Login form for the user
-class LoginForm(forms.Form):
-	username = forms.CharField(label="User Name", max_length=40)
-	password = forms.CharField(label="Password", widget=forms.PasswordInput)
+class DataTableForm(forms.ModelForm):
+	class Meta:
+		model = DataTable
+		fields = ('name',)

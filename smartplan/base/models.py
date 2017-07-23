@@ -21,6 +21,7 @@ class DataLayer(models.Model):
 class DataTable(models.Model):
 	name = models.CharField(max_length=100)
 	dataLayer = models.ForeignKey('DataLayer')
+	tableLink = models.CharField(max_length=100)
 	creationDate = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Creation date")
 	updateDate = models.DateTimeField(auto_now=True, verbose_name="Last Update Date")
 
