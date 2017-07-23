@@ -5,6 +5,5 @@ from . import views
 urlpatterns = [
     url(r'^$', views.home),
     url(r'^dataLayer$', views.dataLayer),
-    url(r'^test$', views.dire_bonjour),
 ]
 	

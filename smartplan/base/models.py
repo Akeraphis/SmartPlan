@@ -33,4 +33,4 @@ class Profile(models.Model):
 	company = models.OneToOneField(Company)
 
 	def __str__(self):
-		return self.user
+		return self.user.username
