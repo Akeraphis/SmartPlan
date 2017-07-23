@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 from .models import DataTable
 from django.db.models.query import QuerySet
+from django.views.generic.detail import DetailView
+from lib2to3.fixes.fix_input import context
 
 @login_required(login_url='/login/')
 # Home view
@@ -21,3 +23,9 @@ class ListDataTables(ListView):
     
     def get_queryset(self):
     	return DataTable.objects.filter(dataLayer=self.kwargs['id_company'])
+	
+class DetailDataTable(DetailView):
+	context_object_name = "data_table"
+	model = DataTable
+	template ="datatable_detail.html"
+	
