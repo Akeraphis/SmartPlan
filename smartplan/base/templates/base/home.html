@@ -3,6 +3,6 @@
 {% block content %}
 	<h5>Logged in as {{user}} from {{user.profile.company}}</h5>
 	<ul>
-		<li><a href="dataLayer">Data Layer</a></li>
+		<li><a href="dataLayer/{{user.profile.company.id}}">Data Layer</a></li>
 	</ul>
 {% endblock %}

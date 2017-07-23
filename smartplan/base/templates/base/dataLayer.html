@@ -1,1 +1,7 @@
 <h2>Data Layer of {{user.profile.company}}</h2>
+
+{% for dt in data_tables_of_data_layer %}
+    <div class="dt">
+       <h3>{{ dt.name }}</h3>
+    </div>
+{% endfor %}

@@ -14,7 +14,7 @@ class DataLayer(models.Model):
 	company = models.OneToOneField(Company)
 
 	def __str__(self):
-		return self.id
+		return self.company.name
 
 # Model to define a data table
 # There can be n data tables in a data layer
